@@ -19,7 +19,6 @@ public class Megamenu extends BaseClass{
 		
 	}
 
-	
 	By dresses_link = By.xpath("//*[@id='block_top_menu']/ul/li[2]/a");
 	By summerdress_link = By.xpath("//*[@id='block_top_menu']/ul/li[2]//a[@title='Summer Dresses']");
 	
@@ -36,11 +35,9 @@ public class Megamenu extends BaseClass{
 				 wait.until(ExpectedConditions.visibilityOfElementLocated(summerdress_link));
 				 Actions action1 = new Actions(driver);
 				 action1.moveToElement(summerdresslink).click(summerdresslink).build().perform();
-				 
-		
-				 
+			 
 			 }catch(NoSuchElementException e){
-				 
+				 System.out.println("Element not found exception");
 			 }
 		 }
 }

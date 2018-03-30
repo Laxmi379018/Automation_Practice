@@ -47,13 +47,7 @@ public String getEmailID()
 	return pro.getProperty("EmailID");
 	
 }
-public String getUserID()
-	
-	{
 
-		return pro.getProperty("UserID");
-		
-	}
 
 public String getUserPassword()
 

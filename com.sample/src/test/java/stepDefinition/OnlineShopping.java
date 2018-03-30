@@ -18,46 +18,45 @@ import cucumber.api.java.en.When;
 import helper.BaseClass;
 import helper.BrowserFactory;
 import helper.ConfigReader;
-import managers.PageObjectManager;
 
 
 public class OnlineShopping{
 
- 	public WebDriver driver;
- 	PageObjectManager pageobject;
- 	
- 	
-	 public OnlineShopping()
-	 {
-	   pageobject = new PageObjectManager(driver);
-	 	 
-	 }
- 
+	public WebDriver driver;
+ 	Megamenu megamenu;
+	RegistrationPage regpage;
+	Sort_SummerDress sortsumdress;
+	ConfigReader config = new ConfigReader();
+	
 		 @When("^I open automationpractice website$")
-		 public void i_open_automationpractice_website() throws Throwable {	
-			 
-			 BrowserFactory.startBrowser(pageobject.getConfigReader().getBrowser(), pageobject.getConfigReader().getURL());
+		 public void i_open_automationpractice_website() throws Throwable {				 
+			 BrowserFactory.startBrowser(config.getBrowser(), config.getURL());
 			 driver = BrowserFactory.driver;
 		 }
 	 
 		 @When("^I sign in$")
 		 public void i_sign_in() throws Throwable {	
 			 
-			 pageobject.getRegistrationPage().accountCreation();
+			 regpage = new RegistrationPage(driver);
+			 regpage.accountCreation(config.getEmailID());
 			
 		 }
 		 @Then("^I check megamenu$")
 		 public void i_check_megamenu() throws Throwable {
 			 
-			 pageobject.getMegaMenu().summerDress();
+			 megamenu = new Megamenu(driver);
+			 megamenu.summerDress();
 		 }
 
 		 @Then("^Sort Summer dresses$")
 		 public void sort_Summer_dresses() throws Throwable {
-			 pageobject.getSummerDressSorting().sort();
+			 
+			 sortsumdress =  new Sort_SummerDress(driver);
+			 sortsumdress.sort();
 		 }
 		 @Then("^I sign out$")
 		 public void i_sign_out() throws Throwable {
 		
+			 driver.quit();
 		 }
 }

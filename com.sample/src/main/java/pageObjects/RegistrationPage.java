@@ -20,13 +20,13 @@ public class RegistrationPage extends BaseClass{
 		By invalid_email_Id = By.xpath("//div[@class='alert alert-danger']");
 		By invalid_email_Id_Message = By.xpath("//div[@class='alert alert-danger']//li");
 		
-		public void accountCreation(){
+		public void accountCreation(String emailID){
 			
 			try {
 			driver.findElement(sign_in_link).click();
 			Thread.sleep(5);	
 			
-			driver.findElement(email_id_input).sendKeys(config.getEmailID());
+			driver.findElement(email_id_input).sendKeys(emailID);
 			driver.findElement(createAccount_Button).click();
 			
 				try{

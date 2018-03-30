@@ -25,13 +25,13 @@ public class BrowserFactory extends BaseClass
 			driver.get(URL);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		}
-		else if(config.getBrowser().equalsIgnoreCase("IE"))
+		else if(Browsername.equalsIgnoreCase("IE"))
 		{
 			
 			File ieFile = new File("C:\\Users\\KASTURI PARIDA\\workspace\\Gleam\\IEDriverServer.exe");
 			System.setProperty("webdriver.ie.driver", ieFile.getAbsolutePath());
 			DesiredCapabilities ieCaps = DesiredCapabilities.internetExplorer();
-			ieCaps.setCapability(InternetExplorerDriver.INITIAL_BROWSER_URL, config.getURL());
+			ieCaps.setCapability(InternetExplorerDriver.INITIAL_BROWSER_URL, URL);
 			driver = new InternetExplorerDriver(ieCaps);
 			
 		}

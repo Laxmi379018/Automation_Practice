@@ -43,35 +43,35 @@ formatter.match({
   "location": "OnlineShopping.i_open_automationpractice_website()"
 });
 formatter.result({
-  "duration": 11415336056,
+  "duration": 9375497201,
   "status": "passed"
 });
 formatter.match({
   "location": "OnlineShopping.i_sign_in()"
 });
 formatter.result({
-  "duration": 4086206037,
+  "duration": 67411633975,
   "status": "passed"
 });
 formatter.match({
   "location": "OnlineShopping.i_check_megamenu()"
 });
 formatter.result({
-  "duration": 3281122256,
+  "duration": 2820742445,
   "status": "passed"
 });
 formatter.match({
   "location": "OnlineShopping.sort_Summer_dresses()"
 });
 formatter.result({
-  "duration": 5651347142,
+  "duration": 5717398085,
   "status": "passed"
 });
 formatter.match({
   "location": "OnlineShopping.i_sign_out()"
 });
 formatter.result({
-  "duration": 29019,
+  "duration": 1138226295,
   "status": "passed"
 });
 });
