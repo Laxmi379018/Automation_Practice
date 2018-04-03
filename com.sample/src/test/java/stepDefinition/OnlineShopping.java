@@ -46,6 +46,7 @@ public class OnlineShopping{
 			 
 			 megamenu = new Megamenu(driver);
 			 megamenu.summerDress();
+			
 		 }
 
 		 @Then("^Sort Summer dresses$")
@@ -54,9 +55,9 @@ public class OnlineShopping{
 			 sortsumdress =  new Sort_SummerDress(driver);
 			 sortsumdress.sort();
 		 }
+		 
 		 @Then("^I sign out$")
-		 public void i_sign_out() throws Throwable {
-		
-			 driver.quit();
+		 public void i_sign_out() throws Throwable {		
+			//driver.quit();
 		 }
 }

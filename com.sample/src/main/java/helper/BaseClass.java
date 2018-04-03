@@ -12,7 +12,6 @@ public abstract class BaseClass {
 public BaseClass(WebDriver driver){
  BaseClass.driver = driver;
  BaseClass.bResult = true;
- wait = new WebDriverWait(driver, 60);
- 
+ BaseClass.wait = new WebDriverWait(driver, 15);
  }
 }
