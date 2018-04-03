@@ -54,10 +54,9 @@ public class Sort_SummerDress extends BaseClass{
 					wait.until(ExpectedConditions.visibilityOf(priceSorted));
 				//	System.out.println("Dress price : "+priceSorted.getText().toString());
 					String sortedPriceValue = priceSorted.getText().toString().replace("$", "");					
-					pricesSorted.add((int) Double.parseDouble(sortedPriceValue.trim()));
-					System.out.println("Sorted price : "+pricesSorted);				
+					pricesSorted.add((int) Double.parseDouble(sortedPriceValue.trim()));							
 				}
-				
+				System.out.println("Sorted price : "+pricesSorted);		
 				boolean result = Arrays.equals(prices.toArray(),pricesSorted.toArray());
 				if(result==true){
 					System.out.println("Summer dress prices are sorted correctlly");				
